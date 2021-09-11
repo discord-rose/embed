@@ -1,4 +1,4 @@
-import { APIEmbed, APIMessage } from 'discord-api-types'
+import type { APIEmbed, APIMessage } from 'discord-api-types'
 import Colors from './colors'
 
 global.ROSE_DEFAULT_EMBED = {}
@@ -30,7 +30,7 @@ export class Embed <Res extends any = Promise<APIMessage>, Params extends any[] 
    * @param icon Author avatar icon
    * @param url URL anchored to the author name
    */
-  author (name?: string, icon?: string, url?: string): this {
+  author (name: string, icon?: string, url?: string): this {
     this.obj.author = {
       name,
       icon_url: icon,
